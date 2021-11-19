@@ -62,7 +62,7 @@ export default function Home() {
         <AboutMe
             name="PHOENiX"
             bio={<p>
-                I'm currently a hobbyist developer working on <a href="https://homemediadb.org">homemediadb.org</a>&nbsp;
+                I'm currently a hobbyist developer working on <a href="https://homemediadb.org">homemediadb.org</a>{" "}
                 and various software projects on my <a href="https://github.com/rlaphoenix">GitHub</a>.</p>
             }
             location="Ireland"
