@@ -26,7 +26,7 @@ export default function NavBar(props) {
     return (
         <nav className="flex bg-gray-800 justify-center">
             <div className="flex flex-row flex-grow max-w-4xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
-                <div className="absolute top-2">
+                <div className="absolute top-2 shadow-md">
                     <Link href="/">
                         <a class="flex">
                             <Image
