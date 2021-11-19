@@ -2,9 +2,10 @@ import Image from "next/image"
 import { MdLocationPin, MdOutlineEmail } from "react-icons/md"
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai"
 import logo from "../public/logo.png"
+import python_iq from "../public/pluralsight-python.png"
 
 
-function AboutMe({avatar, name, bio, location, email, github, twitter, languages}) {
+function AboutMe({avatar, name, bio, location, email, github, twitter, languages, achievements}) {
     return <div className="flex flex-1 flex-col space-y-4">
         <div className="space-y-4">
             <Image
@@ -42,6 +43,9 @@ function AboutMe({avatar, name, bio, location, email, github, twitter, languages
                 {lang}
             </a>)}
         </div>
+        <div className="flex flex-col gap-4">
+            {achievements.map(elem => <div>{elem}</div>)}
+        </div>
     </div>
 }
 
@@ -74,6 +78,20 @@ export default function Home() {
             github="rlaphoenix"
             twitter="rlaphoenix"
             languages={["git", "python", "c#", "php", "html", "css", "javascript", "nodejs", "reactjs"]}
+            achievements={[
+                <>
+                    <div>
+                        <Image
+                            src={python_iq}
+                            alt="Pluralsight IQ Python Result"
+                            width={130}
+                            height={28}
+                            className="rounded-md"
+                        />
+                    </div>
+                    <small>in Python Core Language</small>
+                </>
+            ]}
         />
         <Projects entries={[
             [
