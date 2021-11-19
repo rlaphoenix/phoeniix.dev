@@ -22,49 +22,38 @@ export default function NavBar(props) {
     })
 
     return (
-        <nav className="bg-gray-800">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="relative flex items-center justify-between h-16">
-                    <div className="flex-1 flex items-center justify-start sm:items-stretch">
-                        <div className="flex flex-shrink-0 items-center">
-                            <Link href="/">
-                                <a className="flex">
-                                    <Image
-                                        src={logo}
-                                        alt="Logo"
-                                        width={32}
-                                        height={32}
-                                        className="rounded"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        <div className="hidden sm:block sm:ml-6">
-                            <div className="flex space-x-4">
-                                {entries}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="absolute inset-y-0 right-0 flex items-center space-x-2 pr-2 sm:static sm:inset-auto
-                        sm:ml-6 sm:pr-0">
-                        <Link href="https://github.com/rlaphoenix">
-                            <a className="p-1 bg-gray-800 bg-opacity-20 text-gray-400 hover:text-white">
-                                <span className="sr-only">GitHub</span>
-                                <AiFillGithub className="h-6 w-6" aria-hidden="true"/>
-                            </a>
-                        </Link>
-                        <Link href="https://twitter.com/rlaphoenix">
-                            <a className="pl-1 bg-gray-800 bg-opacity-20 text-gray-400 hover:text-white">
-                                <span className="sr-only">Twitter</span>
-                                <AiFillTwitterCircle className="h-6 w-6" aria-hidden="true"/>
-                            </a>
-                        </Link>
-                    </div>
+        <nav className="flex bg-gray-800 justify-center">
+            <div className="flex flex-row flex-grow max-w-4xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
+                <div>
+                    <Link href="/">
+                        <a class="flex">
+                            <Image
+                                src={logo}
+                                alt="Logo"
+                                width={32}
+                                height={32}
+                                className="rounded"
+                            />
+                        </a>
+                    </Link>
                 </div>
-            </div>
-
-            <div className="sm:hidden px-2 pb-3 space-x-2 flex flex-row justify-center">
-                {entries}
+                <div className="flex flex-row space-x-4 flex-1">
+                    {entries}
+                </div>
+                <div className="flex flex-row space-x-4">
+                    <Link href="https://github.com/rlaphoenix">
+                        <a className="flex bg-gray-800 bg-opacity-20 text-gray-400 hover:text-white">
+                            <span className="sr-only">GitHub</span>
+                            <AiFillGithub size={"1.5rem"} aria-hidden="true"/>
+                        </a>
+                    </Link>
+                    <Link href="https://twitter.com/rlaphoenix">
+                        <a className="flex bg-gray-800 bg-opacity-20 text-gray-400 hover:text-white">
+                            <span className="sr-only">Twitter</span>
+                            <AiFillTwitterCircle size={"1.5rem"} aria-hidden="true"/>
+                        </a>
+                    </Link>
+                </div>
             </div>
         </nav>
     )
