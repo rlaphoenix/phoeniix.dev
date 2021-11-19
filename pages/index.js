@@ -45,6 +45,21 @@ function AboutMe({avatar, name, bio, location, email, github, twitter, languages
     </div>
 }
 
+function Projects({ entries }) {
+    return <div className="bg-gray-900 text-gray-300 max-w-xs rounded-md space-y-4 p-4">
+        <h1 className="text-xl">Project Showcase</h1>
+        <div className="flex flex-col space-y-2 text-sm">
+            {entries.map(project => <div>
+                <a href={project[0]} className="text-light-blue-500">{project[0].split('/').pop()}</a>
+                <p className="text-xs">{project[1]}</p>
+            </div>)}
+            <a href="https://github.com/rlaphoenix?tab=repositories" className="text-emerald-300">
+                <small>view more projects</small>
+            </a>
+        </div>
+    </div>
+}
+
 export default function Home() {
     return <div className="flex flex-row space-x-2">
         <AboutMe
@@ -60,5 +75,26 @@ export default function Home() {
             twitter="rlaphoenix"
             languages={["git", "python", "c#", "php", "html", "css", "javascript", "nodejs", "reactjs"]}
         />
+        <Projects entries={[
+            [
+                "https://github.com/rlaphoenix/VSGAN",
+                "VapourSynth Single Image Super-Resolution Generative Adversarial Network"
+            ], [
+                "https://github.com/rlaphoenix/pynfogen",
+                "Scriptable MediaInfo-fed NFO Generator for Movies and TV"
+            ], [
+                "https://github.com/rlaphoenix/pvsfunc",
+                "PHOENiX's compilation of VapourSynth Script's and Functions"
+            ], [
+                "https://github.com/rlaphoenix/Slipstream",
+                "The most informative Home-media backup solution"
+            ], [
+                "https://github.com/rlaphoenix/pydvdcss",
+                "Python wrapper for VideoLAN's libdvdcss library"
+            ], [
+                "https://github.com/rlaphoenix/hdlg",
+                "Modern cross-platform GUI for hdl-dump"
+            ],
+        ]}/>
     </div>
 }
