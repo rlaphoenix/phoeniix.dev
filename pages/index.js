@@ -61,7 +61,7 @@ function Projects({ entries }) {
 }
 
 export default function Home() {
-    return <div className="flex flex-row space-x-2">
+    return <div className="flex flex-col sm:flex-row gap-6">
         <AboutMe
             avatar={logo}
             name="PHOENiX"
