@@ -21,22 +21,25 @@ export default function NavBar(props) {
         </Link>
     })
 
+    const avatar_size = 100
+
     return (
         <nav className="flex bg-gray-800 justify-center">
             <div className="flex flex-row flex-grow max-w-4xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
-                <div>
+                <div className="absolute top-2">
                     <Link href="/">
                         <a class="flex">
                             <Image
                                 src={logo}
                                 alt="Logo"
-                                width={32}
-                                height={32}
+                                width={avatar_size}
+                                height={avatar_size}
                                 className="rounded"
                             />
                         </a>
                     </Link>
                 </div>
+                <div style={{marginLeft: avatar_size}}>&nbsp;</div>
                 <div className="flex flex-row space-x-4 flex-1">
                     {entries}
                 </div>

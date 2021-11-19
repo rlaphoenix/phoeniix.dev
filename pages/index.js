@@ -1,20 +1,13 @@
 import Image from "next/image"
 import { MdLocationPin, MdOutlineEmail } from "react-icons/md"
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai"
-import logo from "../public/logo.png"
 import python_iq from "../public/pluralsight-python.png"
 
 
-function AboutMe({avatar, name, bio, location, email, github, twitter, languages, achievements}) {
+function AboutMe({name, bio, location, email, github, twitter, languages, achievements}) {
     return <div className="flex flex-1 flex-col space-y-4">
         <div className="space-y-4">
-            <Image
-                src={avatar}
-                alt="Avatar"
-                width={125}
-                height={125}
-                className="rounded-md"
-            />
+            <div style={{height: 40}}>&nbsp;</div>
             <h1 className="text-xl">Hi, I'm {name}.</h1>
         </div>
         {bio}
@@ -67,7 +60,6 @@ function Projects({ entries }) {
 export default function Home() {
     return <div className="flex flex-col sm:flex-row gap-6">
         <AboutMe
-            avatar={logo}
             name="PHOENiX"
             bio={<p>
                 I'm currently a hobbyist developer working on <a href="https://homemediadb.org">homemediadb.org</a>&nbsp;
