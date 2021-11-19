@@ -1,3 +1,5 @@
+require("windi.css")
+
 import Head from "next/head"
 import Footer from "../components/footer"
 
