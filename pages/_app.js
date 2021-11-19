@@ -11,7 +11,7 @@ export default function App({Component, pageProps}) {
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
         </Head>
         <main>
-            <div className="max-w-6xl mx-auto p-4 sm:p-6 lg:px-8">
+            <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:px-8">
                 <div className="gap-2">
                     <Component {...pageProps} />
                 </div>
