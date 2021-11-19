@@ -46,7 +46,7 @@ function AboutMe({avatar, name, bio, location, email, github, twitter, languages
 }
 
 function Projects({ entries }) {
-    return <div className="bg-gray-900 text-gray-300 max-w-xs rounded-md space-y-4 p-4">
+    return <div className="bg-gray-900 text-gray-300 sm:max-w-xs rounded-md space-y-4 p-4">
         <h1 className="text-xl">Project Showcase</h1>
         <div className="flex flex-col space-y-2 text-sm">
             {entries.map(project => <div>
