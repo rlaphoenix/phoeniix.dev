@@ -1,9 +1,11 @@
 import Image from "next/image"
 import Dots from "../components/dots"
+import Card from "../components/card"
 import { MdLocationPin, MdOutlineEmail } from "react-icons/md"
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai"
 import python_iq from "../public/pluralsight-python.png"
 import logo from "../public/logo.png"
+import hmdb from "../public/hmdb.png"
 
 
 function AboutMe({avatar, name, bio, location, email, github, twitter, languages, achievements}) {
@@ -70,54 +72,74 @@ function Projects({ entries }) {
 }
 
 export default function Home() {
-    return <div className="flex flex-col md:flex-row gap-6">
-        <AboutMe
-            avatar={logo}
-            name="PHOENiX"
-            bio={<p>
-                I'm currently a hobbyist developer working on <a href="https://homemediadb.org">homemediadb.org</a>{" "}
-                and various software projects on my <a href="https://github.com/rlaphoenix">GitHub</a>.</p>
-            }
-            location="Ireland"
-            email="rlaphoenix@pm.me"
-            github="rlaphoenix"
-            twitter="rlaphoenix"
-            languages={["git", "python", "c#", "php", "html", "css", "javascript", "nodejs", "reactjs"]}
-            achievements={[
-                <>
-                    <div>
-                        <Image
-                            src={python_iq}
-                            alt="Pluralsight IQ Python Result"
-                            width={130}
-                            height={28}
-                            className="rounded-md"
-                        />
-                    </div>
-                    <small>in Python Core Language</small>
-                </>
-            ]}
-        />
-        <Projects entries={[
-            [
-                "https://github.com/rlaphoenix/VSGAN",
-                "VapourSynth Single Image Super-Resolution Generative Adversarial Network"
-            ], [
-                "https://github.com/rlaphoenix/pynfogen",
-                "Scriptable MediaInfo-fed NFO Generator for Movies and TV"
-            ], [
-                "https://github.com/rlaphoenix/pvsfunc",
-                "PHOENiX's compilation of VapourSynth Script's and Functions"
-            ], [
-                "https://github.com/rlaphoenix/Slipstream",
-                "The most informative Home-media backup solution"
-            ], [
-                "https://github.com/rlaphoenix/pydvdcss",
-                "Python wrapper for VideoLAN's libdvdcss library"
-            ], [
-                "https://github.com/rlaphoenix/hdlg",
-                "Modern cross-platform GUI for hdl-dump"
-            ],
-        ]}/>
+    return <div className="flex flex-col gap-6">
+        <div className="flex flex-col md:flex-row gap-6">
+            <AboutMe
+                avatar={logo}
+                name="PHOENiX"
+                bio={<p>
+                    I'm currently a hobbyist developer working on <a href="https://homemediadb.org">homemediadb.org</a>{" "}
+                    and various software projects on my <a href="https://github.com/rlaphoenix">GitHub</a>.</p>
+                }
+                location="Ireland"
+                email="rlaphoenix@pm.me"
+                github="rlaphoenix"
+                twitter="rlaphoenix"
+                languages={["git", "python", "c#", "php", "html", "css", "javascript", "nodejs", "reactjs"]}
+                achievements={[
+                    <>
+                        <div>
+                            <Image
+                                src={python_iq}
+                                alt="Pluralsight IQ Python Result"
+                                width={130}
+                                height={28}
+                                className="rounded-md"
+                            />
+                        </div>
+                        <small>in Python Core Language</small>
+                    </>
+                ]}
+            />
+            <Projects entries={[
+                [
+                    "https://github.com/rlaphoenix/VSGAN",
+                    "VapourSynth Single Image Super-Resolution Generative Adversarial Network"
+                ], [
+                    "https://github.com/rlaphoenix/pynfogen",
+                    "Scriptable MediaInfo-fed NFO Generator for Movies and TV"
+                ], [
+                    "https://github.com/rlaphoenix/pvsfunc",
+                    "PHOENiX's compilation of VapourSynth Script's and Functions"
+                ], [
+                    "https://github.com/rlaphoenix/Slipstream",
+                    "The most informative Home-media backup solution"
+                ], [
+                    "https://github.com/rlaphoenix/pydvdcss",
+                    "Python wrapper for VideoLAN's libdvdcss library"
+                ], [
+                    "https://github.com/rlaphoenix/hdlg",
+                    "Modern cross-platform GUI for hdl-dump"
+                ],
+            ]}/>
+        </div>
+        <div className="flex flex-col gap-6">
+            <h1 className="text-xl">Spotlight</h1>
+            <Card
+                image={<Image
+                    src={hmdb}
+                    alt="Homemediadb.org Title Page"
+                    width={1230 / 2}
+                    height={894 / 2}
+                    className="rounded-md"
+                />}
+                title={<a href="https://homemediadb.org">Homemediadb.org</a>}
+                sub="In Development since 2019"
+                paragraph="Homemediadb (known as HMDb for short) is a database of Home-media inspired by TMDB.
+                It collects and stores information on both Disc and Streaming media, providing as much
+                detail as possible about the medium."
+                extra="Stack: NextJS, Vercel (SSG)"
+            />
+        </div>
     </div>
 }
