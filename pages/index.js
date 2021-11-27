@@ -5,13 +5,13 @@ import python_iq from "../public/pluralsight-python.png"
 import logo from "../public/logo.png"
 
 
-function AboutMe({name, bio, location, email, github, twitter, languages, achievements}) {
+function AboutMe({avatar, name, bio, location, email, github, twitter, languages, achievements}) {
     return <div className="flex flex-1 flex-col space-y-4">
         <div className="flex space-x-4">
-            <div className="flex-shrink-0" style={{width: "100px", height: "auto"}}>
+            <div className="flex-shrink-0" style={{width: "84px", height: "auto"}}>
                 <Image
-                    src={logo}
-                    alt="Pluralsight IQ Python Result"
+                    src={avatar}
+                    alt="Avatar"
                     className="rounded-md"
                 />
             </div>
@@ -69,6 +69,7 @@ function Projects({ entries }) {
 export default function Home() {
     return <div className="flex flex-col md:flex-row gap-6">
         <AboutMe
+            avatar={logo}
             name="PHOENiX"
             bio={<p>
                 I'm currently a hobbyist developer working on <a href="https://homemediadb.org">homemediadb.org</a>{" "}
