@@ -41,7 +41,8 @@ function AboutMe({avatar, name, bio, location, email, github, twitter, languages
         <div className="flex flex-wrap gap-2">
             {languages.map(lang => <a
                 href={`https://stackoverflow.com/questions/tagged/${lang}`}
-                className="bg-light-blue-100 text-gray-600 p-2 py-1 text-sm rounded">
+                className="bg-light-blue-100 text-gray-600 p-2 py-1 text-sm rounded"
+                key={lang}>
                 {lang}
             </a>)}
         </div>
