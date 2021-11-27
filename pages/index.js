@@ -47,7 +47,7 @@ function AboutMe({avatar, name, bio, location, email, github, twitter, languages
             </a>)}
         </div>
         <div className="flex flex-col gap-4">
-            {achievements.map(elem => <div>{elem}</div>)}
+            {achievements.map((elem, i) => <div key={i}>{elem}</div>)}
         </div>
     </div>
 }
@@ -56,7 +56,7 @@ function Projects({ entries }) {
     return <div className="bg-gray-900 text-gray-300 md:max-w-xs rounded-md space-y-4 p-4">
         <h1 className="text-xl">Project Showcase</h1>
         <div className="flex flex-col space-y-2 text-sm">
-            {entries.map(project => <div>
+            {entries.map(project => <div key={project[1]}>
                 <a href={project[0]} className="text-light-blue-500">{project[0].split('/').pop()}</a>
                 <p className="text-xs">{project[1]}</p>
             </div>)}
