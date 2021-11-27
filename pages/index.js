@@ -52,7 +52,7 @@ function AboutMe({name, bio, location, email, github, twitter, languages, achiev
 }
 
 function Projects({ entries }) {
-    return <div className="bg-gray-900 text-gray-300 sm:max-w-xs rounded-md space-y-4 p-4">
+    return <div className="bg-gray-900 text-gray-300 md:max-w-xs rounded-md space-y-4 p-4">
         <h1 className="text-xl">Project Showcase</h1>
         <div className="flex flex-col space-y-2 text-sm">
             {entries.map(project => <div>
@@ -67,7 +67,7 @@ function Projects({ entries }) {
 }
 
 export default function Home() {
-    return <div className="flex flex-col sm:flex-row gap-6">
+    return <div className="flex flex-col md:flex-row gap-6">
         <AboutMe
             name="PHOENiX"
             bio={<p>
