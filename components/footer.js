@@ -15,6 +15,7 @@ export default function Footer() {
             <Link href={"mailto:rlaphoenix@pm.me"}><a>Contact</a></Link>
             <Link href={"https://media.phoeniix.dev:8443"}><a>Emby</a></Link>
             <Link href={"https://media.phoeniix.dev:2096"}><a>Plex</a></Link>
+            <Link href={"https://github.com/rlaphoenix/phoeniix.dev"}><a>Source Code</a></Link>
         </div>
         <Copyright begin={2021} />
     </footer>
