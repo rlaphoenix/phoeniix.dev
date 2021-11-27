@@ -2,15 +2,24 @@ import Image from "next/image"
 import { MdLocationPin, MdOutlineEmail } from "react-icons/md"
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai"
 import python_iq from "../public/pluralsight-python.png"
+import logo from "../public/logo.png"
 
 
 function AboutMe({name, bio, location, email, github, twitter, languages, achievements}) {
     return <div className="flex flex-1 flex-col space-y-4">
-        <div className="space-y-4">
-            <div style={{height: 40}}>&nbsp;</div>
-            <h1 className="text-xl">Hi, I'm {name}.</h1>
+        <div className="flex space-x-4">
+            <div className="flex-shrink-0" style={{width: "100px", height: "auto"}}>
+                <Image
+                    src={logo}
+                    alt="Pluralsight IQ Python Result"
+                    className="rounded-md"
+                />
+            </div>
+            <div className="flex flex-col space-y-1">
+                <h1 className="text-xl">Hi, I'm {name}.</h1>
+                {bio}
+            </div>
         </div>
-        {bio}
         <div className="flex flex-noshrink flex-wrap gap-4 gap-y-1 text-gray-600">
             <div className="flex space-x-1">
                 <MdLocationPin size={"1.5rem"}/>
