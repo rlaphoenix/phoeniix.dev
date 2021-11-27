@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Dots from "../components/dots"
 import { MdLocationPin, MdOutlineEmail } from "react-icons/md"
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai"
 import python_iq from "../public/pluralsight-python.png"
@@ -49,6 +50,7 @@ function AboutMe({avatar, name, bio, location, email, github, twitter, languages
         <div className="flex flex-col gap-4">
             {achievements.map((elem, i) => <div key={i}>{elem}</div>)}
         </div>
+        <Dots className="flex flex-1 <md:hidden"/>
     </div>
 }
 
