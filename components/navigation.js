@@ -1,6 +1,7 @@
 import {useRouter} from "next/router"
 import Link from "next/link"
-import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
+import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai"
+import { BiHome } from "react-icons/bi"
 
 export default function NavBar(props) {
     const router = useRouter()
@@ -22,6 +23,10 @@ export default function NavBar(props) {
     return (
         <nav className="flex bg-gray-800 justify-center">
             <div className="flex flex-row flex-grow max-w-5xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
+                <a className="flex bg-gray-800 bg-opacity-20 text-gray-400">
+                    <span className="sr-only">Home</span>
+                    <BiHome size={"1.5rem"} aria-hidden="true"/>
+                </a>
                 <div className="flex flex-row space-x-4 flex-1">
                     {entries}
                 </div>
