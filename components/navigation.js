@@ -21,7 +21,7 @@ export default function NavBar(props) {
 
     return (
         <nav className="flex bg-gray-800 justify-center">
-            <div className="flex flex-row flex-grow max-w-4xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
+            <div className="flex flex-row flex-grow max-w-5xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
                 <div className="flex flex-row space-x-4 flex-1">
                     {entries}
                 </div>
