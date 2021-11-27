@@ -9,13 +9,16 @@ function Copyright({begin}) {
     </div>
 }
 
-export default function Footer() {
+export default function Footer(props) {
+    const entries = Object.entries(props).map(([name, href]) => {
+        return <Link href={href} key={name}>
+            <a>{name}</a>
+        </Link>
+    })
+
     return <footer className="flex flex-col p-8 gap-4 border-t border-gray-200">
         <div className="flex flex-row flex-wrap justify-center gap-x-16 gap-y-4 text-gray-500">
-            <Link href={"mailto:rlaphoenix@pm.me"}><a>Contact</a></Link>
-            <Link href={"https://media.phoeniix.dev:8443"}><a>Emby</a></Link>
-            <Link href={"https://media.phoeniix.dev:2096"}><a>Plex</a></Link>
-            <Link href={"https://github.com/rlaphoenix/phoeniix.dev"}><a>Source Code</a></Link>
+            {entries}
         </div>
         <Copyright begin={2021} />
     </footer>

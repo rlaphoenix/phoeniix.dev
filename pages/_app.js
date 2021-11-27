@@ -19,6 +19,11 @@ export default function App({Component, pageProps}) {
                 </div>
             </div>
         </main>
-        <Footer/>
+        <Footer
+            Contact="mailto:rlaphoenix@pm.me"
+            Emby="https://media.phoeniix.dev:8443"
+            Plex="https://media.phoeniix.dev:2096"
+            Source="https://github.com/rlaphoenix/phoeniix.dev"
+        />
     </>
 }
