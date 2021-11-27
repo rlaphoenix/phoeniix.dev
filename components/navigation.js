@@ -1,7 +1,5 @@
 import {useRouter} from "next/router"
 import Link from "next/link"
-import Image from "next/image"
-import logo from "../public/logo.png"
 import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
 
 export default function NavBar(props) {
@@ -21,25 +19,9 @@ export default function NavBar(props) {
         </Link>
     })
 
-    const avatar_size = 100
-
     return (
         <nav className="flex bg-gray-800 justify-center">
             <div className="flex flex-row flex-grow max-w-4xl py-2 px-4 sm:px-6 lg:px-8 space-x-6 items-center">
-                <div className="absolute top-2 shadow-md">
-                    <Link href="/">
-                        <a class="flex">
-                            <Image
-                                src={logo}
-                                alt="Logo"
-                                width={avatar_size}
-                                height={avatar_size}
-                                className="rounded"
-                            />
-                        </a>
-                    </Link>
-                </div>
-                <div style={{marginLeft: avatar_size}}>&nbsp;</div>
                 <div className="flex flex-row space-x-4 flex-1">
                     {entries}
                 </div>
