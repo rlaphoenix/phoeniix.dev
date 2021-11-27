@@ -12,12 +12,12 @@ function Copyright({begin}) {
 export default function Footer(props) {
     const entries = Object.entries(props).map(([name, href]) => {
         return <Link href={href} key={name}>
-            <a>{name}</a>
+            <a className="text-center min-w-5rem">{name}</a>
         </Link>
     })
 
     return <footer className="flex flex-col p-8 gap-4 border-t border-gray-200">
-        <div className="flex flex-row flex-wrap justify-center gap-x-16 gap-y-4 text-gray-500">
+        <div className="flex flex-wrap justify-center gap-x-14 gap-y-4 text-gray-500">
             {entries}
         </div>
         <Copyright begin={2021} />
